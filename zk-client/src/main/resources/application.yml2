@@ -1,0 +1,15 @@
+####订单服务器端口号
+server:
+  port: 8001
+###服务别名---服务器注册到注册中心的名称
+spring:
+  application:
+    name: zk-client
+  cloud:
+    zookeeper:
+      #注册到zk的地址
+      connect-string: 192.168.88.85:2181
+ribbon:
+  eager-load:
+#    clients: hadoop-master, zk-member
+    enabled: true
